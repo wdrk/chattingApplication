@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.user-container {
+  background-color: #a9bdce;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.user-container label {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.user-container input {
+  border-radius: 3px;
+  border: none;
+  height: 50%;
+}
+
+.display-container {
+  background-color: #b2c7d9;
+  flex: 12;
+}
+
+.input-container {
+  flex: 2;
+}
