@@ -21,6 +21,7 @@ io.on('connection', (socket) => {
   // ('채널이름', 동작)
   socket.on('chatting', (data) => {
     console.log(data);
+    io.emit('chatting', `hello ${data}`);
   });
 });
 
