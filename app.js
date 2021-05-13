@@ -18,7 +18,10 @@ const PORT = process.env.PORT || 5000; /* 사용할 포트를 설정 */
 
 // 연결됐을 때 모든 정보를 socket에 담는다
 io.on('connection', (socket) => {
-  console.log('connected');
+  // ('채널이름', 동작)
+  socket.on('chatting', (data) => {
+    console.log(data);
+  });
 });
 
 server.listen(PORT, () => console.log(`server is running ${PORT}`));
