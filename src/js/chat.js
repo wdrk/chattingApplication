@@ -19,6 +19,8 @@ sendButton.addEventListener('click', () => {
 
 // 들어오는 메시지를 받는 코드
 socket.on('chatting', (data) => {
-  console.log(data);
+  const li = document.createElement('li');
+  li.innerText = `${data.name}님이 - ${data.msg}`;
+  chatList.appendChild(li);
 });
 console.log(socket);

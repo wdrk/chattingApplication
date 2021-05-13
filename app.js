@@ -20,8 +20,7 @@ const PORT = process.env.PORT || 5000; /* 사용할 포트를 설정 */
 io.on('connection', (socket) => {
   // ('채널이름', 동작)
   socket.on('chatting', (data) => {
-    console.log(data);
-    io.emit('chatting', `hello ${data}`);
+    io.emit('chatting', data);
   });
 });
 
