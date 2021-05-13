@@ -42,6 +42,7 @@ sendButton.addEventListener('click', () => {
 
 // 들어오는 메시지를 받는 코드
 socket.on('chatting', (data) => {
+  console.log(data);
   const { name, msg, time } = data;
   const item = new LiModel(name, msg, time);
   item._makeLi();
