@@ -48,7 +48,10 @@ function LiModel(name, msg, time) {
     chatList.appendChild(li);
   };
 }
-sendButton.addEventListener('click', send);
+sendButton.addEventListener('click', () => {
+  send();
+  chatInput.value = '';
+});
 
 // 들어오는 메시지를 받는 코드
 socket.on('chatting', (data) => {
